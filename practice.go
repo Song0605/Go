@@ -8,7 +8,6 @@ import (
 )
 
 func prac() {
-
 	fmt.Println("Hello World!")
 	fmt.Println()
 	/**/
@@ -128,6 +127,30 @@ func prac() {
 		}
 	}
 	fmt.Println(count)
+	/**/
+	string10 := "string10"
+	switch string10 {
+	case "string10":
+		fmt.Println(string10)
+		fallthrough
+	case "string9":
+		fmt.Println("string9")
+		goto gotoTag
+	default:
+		fmt.Println("...")
+	}
+gotoTag:
+	fmt.Println("goto")
+	/**/
+	for i := 1; i < 10; i++ {
+		for j := 1; j < i+1; j++ {
+			fmt.Printf("|%d * %d = %d", j, i, i*j)
+			if j != 1 && (i*j)/10 == 0 {
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Println()
+	}
 }
 
 func foo() (int, string) {
